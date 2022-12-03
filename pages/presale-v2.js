@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Layout from '../components/Layout'
 import ImgHeader from '../images/example/Header.jpg'
+import Bgcountdown from '../images/bg_countdown.jpg'
 import Icon1 from '../images/icons/Icon_1.png'
 import Icon2 from '../images/icons/Icon_2.png'
 import Icon3 from '../images/icons/Icon_3.png'
@@ -14,7 +15,7 @@ function presaleV2() {
   const [hours, setHours] = useState(0)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
-  const target = new Date("12/1/2022 00:20:00")
+  const target = new Date("12/31/2022 23:59:59")
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -59,17 +60,38 @@ function presaleV2() {
         </div>
       </div>
 
-      <div>
-        ini
-        {
-          getPresale ? <div>Time Stop</div> :
-          <div>
-            <span>{days} - </span>
-            <span>{hours < 10 ? "0" + hours : hours} - </span>
-            <span>{minutes < 10 ? "0" + minutes : minutes} - </span>
-            <span>{seconds < 10 ? "0" + seconds : seconds}</span>
-          </div>
-        }
+      <div className="lg:flex relative overflow-hidden">
+        {/* <div className="lg:absolute top-0 bottom-0 right-0 -left-16 h-[30rem]"> */}
+        <div className="h-[30rem]">
+          <Image src={Bgcountdown} alt="Image BG" className="object-cover object-center w-full min-h-full" />
+        </div>
+        <div className="absolute top-0 bottom-0 right-0 left-0 flex flex-col justify-center items-center">
+          <h1 className="text-2xl text-white font-black tracking-wider font-BebasNeue">PRE-SALE ENDS IN</h1>
+          {
+            getPresale ? 
+            <div>
+              <h1 className="text-4xl text-yellow-primary font-black tracking-wider font-BebasNeue my-8">PRE-SALE END</h1>
+            </div> :
+            <div className="text-white flex items-center my-6 text-3xl font-black">
+              <div>
+                <div className="mx-2 bg-white text-blue-primary flex justify-center items-center w-16 h-16 rounded-md">{days} </div>
+                <p className="text-center font-BebasNeue text-base font-normal">DAYS</p>
+              </div> <span className="pb-7">:</span>
+              <div>
+                <div className="mx-2 bg-white text-blue-primary flex justify-center items-center w-16 h-16 rounded-md">{hours < 10 ? "0" + hours : hours} </div>
+                <p className="text-center font-BebasNeue text-base font-normal">HOURS</p>
+              </div> <span className="pb-7">:</span>
+              <div>
+                <div className="mx-2 bg-white text-blue-primary flex justify-center items-center w-16 h-16 rounded-md">{minutes < 10 ? "0" + minutes : minutes} </div>
+                <p className="text-center font-BebasNeue text-base font-normal">MINUTES</p>
+              </div> <span className="pb-7">:</span>
+              <div>
+                <div className="mx-2 bg-white text-blue-primary flex justify-center items-center w-16 h-16 rounded-md">{seconds < 10 ? "0" + seconds : seconds}</div>
+                <p className="text-center font-BebasNeue text-base font-normal">SECONDS</p>
+              </div>
+            </div>
+          }
+        </div>
       </div>
 
       {/* =====Content====== */}
