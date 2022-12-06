@@ -8,6 +8,7 @@ import Icon2 from '../images/icons/Icon_2.png'
 import Icon3 from '../images/icons/Icon_3.png'
 import Icon4 from '../images/icons/Icon_4.png'
 import Footer from '../components/Footer'
+import dataStatick from '../store/static.json'
 
 function presaleV2() {
   const [getPresale , setPresale] = useState(false)
@@ -18,6 +19,7 @@ function presaleV2() {
   const target = new Date("12/31/2022 23:59:59")
 
   useEffect(() => {
+    console.log("dataStatick", dataStatick);
     const interval = setInterval(() => {
       const now = new Date()
       const difference = target.getTime() - now.getTime()

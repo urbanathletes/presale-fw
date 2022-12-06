@@ -54,13 +54,13 @@ function Presale() {
         </div>
         <div className="bg-blue-primary text-white p-4 md:max-w-md lg:max-w-2xl lg:pl-20 lg:w-full md:py-20 md:bg-transparent md:bg-gradient-to-r md:from-blue-primary md:via-blue-primary z-20">
           <div className="mx-auto md:mx-4 max-w-md lg:max-w-lg">
-            <h3 className="my-4 text-yellow-primary text-3xl font-Poppins-Bold italic font-extrabold">RASAKAN PENGALAMAN NGE-GYM MEWAH DENGAN HARGA YANG RAMAH !</h3>
+            <h3 className="my-4 text-yellow-primary text-3xl font-Poppins-Bold italic font-extrabold">RASAKAN PENGALAMAN GYM MEWAH DENGAN HARGA YANG RAMAH !</h3>
           </div>
           <div className="max-w-md mx-auto md:mx-4">
-            <p className="my-4 font-black text-xl">Daftar pre-sale sekarang juga!, jaminan harga termurah di kelasnya.</p>
+            <p className="my-4 font-black text-xl">Daftar pre-sale sekarang juga, jaminan harga termurah di kelasnya.</p>
             <p className="my-4 py-2">FITNESSWORKS adalah GYM pertama di Gresik yang menerapkan Time Based Membership dan manajemen membership melalui aplikasi. membuat harga kami tetap ramah di kantong anda.</p>
-            {/* <ButtonLink label="SIGN UP FOR PRE-SALE" /> */}
-            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">SIGN UP FOR PRE-SALE</a>
+            {/* <ButtonLink label="DAPATKAN PRE-SALE" /> */}
+            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">DAPATKAN PRE-SALE</a>
           </div>
         </div>
       </div>
@@ -136,8 +136,8 @@ function Presale() {
         </div>
 
         <div className="text-center py-4 my-4">
-          {/* <ButtonLink label="SIGN UP FOR PRE-SALE" /> */}
-            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">SIGN UP FOR PRE-SALE</a>
+          {/* <ButtonLink label="DAPATKAN PRE-SALE" /> */}
+            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">DAPATKAN PRE-SALE</a>
         </div>
         <div className="lg:flex relative overflow-hidden">
           <div className="lg:absolute top-0 bottom-0 right-0 -left-16 h-[30rem] lg:h-full">
