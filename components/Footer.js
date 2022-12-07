@@ -39,7 +39,7 @@ function Footer() {
               <ul className="my-4 lg:my-0">
                 {/* https://goo.gl/maps/coyQW9vNtKfJkfFX6 */}
                 <li className="flex">
-                  <MdLocationPin className="mr-4 text-xl w-20"/> 
+                  <MdLocationPin className="mr-4 text-xl inline w-14"/> 
                   <div>
                   <p>Jl. Raya Gresik - Babat No.1937, Banjai Sari, Banjarsari, Kec. Cerme, Kabupaten Gresik, Jawa Timur 61162</p>
                   <a href="https://goo.gl/maps/XYnpakiWjwszKxq39" target="_blank" rel="noreferrer" className="text-yellow-primary underline hover:text-yellow-500">view location</a>

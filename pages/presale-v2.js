@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Layout from '../components/Layout'
-import ImgHeader from '../images/example/Header.jpg'
+import ImgHeader from '../images/Hero.jpg'
 import Bgcountdown from '../images/bg_countdown.jpg'
+import Poster1 from '../images/Poster-1.jpg'
+import Poster11 from '../images/Poster-1-1.jpg'
+import Poster2 from '../images/Poster-2.jpg'
+import Fotos from '../images/example/Fotos.png'
 import Icon1 from '../images/icons/Icon_1.png'
 import Icon2 from '../images/icons/Icon_2.png'
 import Icon3 from '../images/icons/Icon_3.png'
 import Icon4 from '../images/icons/Icon_4.png'
 import Footer from '../components/Footer'
 import dataStatick from '../store/static.json'
+import BtnPrisale from '../components/BtnPrisale'
+import BtnMembership from '../components/BtnMembership'
+import BtnMembershipChildren from '../components/BtnMembershipChildren'
 
 function presaleV2() {
   const [getPresale , setPresale] = useState(false)
@@ -48,7 +55,8 @@ function presaleV2() {
         <div className="relative md:absolute top-0 right-0 left-0 bottom-0 -z-10">
           <div className="bg-gradient-to-t from-blue-primary md:bg-none absolute top-0 right-0 left-0 bottom-0"></div>
           <Image src={ImgHeader} alt="Pre-Sale Fitnessworks"
-            className="w-full h-full object-none object-right md:object-cover md:object-right-bottom "
+            // className="w-full h-full object-none object-right md:object-cover md:object-right-bottom "
+            className="h-full object-cover object-right"
           />
         </div>
         <div className="bg-blue-primary text-white p-4 md:max-w-md lg:max-w-2xl lg:pl-20 lg:w-full md:py-20 md:bg-transparent md:bg-gradient-to-r md:from-blue-primary md:via-blue-primary z-20">
@@ -56,8 +64,7 @@ function presaleV2() {
             <h3 className="my-4 text-yellow-primary text-xl font-Poppins-Bold italic font-extrabold">RASAKAN PENGALAMAN NGEGYM <br/> MEWAH DENGAN HARGA YANG RAMAH</h3>
             <p className="my-4 font-bold font-Poppins-Bold">daftar pre-sale sekarang juga! jaminan harga termurah di kelasnya.</p>
             <p className="my-4 py-2">FITNESSWORKS adalah GYM pertama di Gresik yang menerapkan Time Based Membership dan manajemen membership melalui aplikasi. membuat harga kami tetap ramah di kantong anda.</p>
-            {/* <ButtonLink label="SIGN UP FOR PRE-SALE" /> */}
-            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">SIGN UP FOR PRE-SALE</a>
+            <BtnPrisale href="#form" />
           </div>
         </div>
       </div>
@@ -142,6 +149,97 @@ function presaleV2() {
                 Fasilitas yang premium, staff dan Trainer yang profesional dan ramah, menciptakan lingkungan yang suportif untuk menjaga mood anda berolahraga.
               </p>
             </div>
+          </div>
+        </div>
+        <div>
+          {/* <h2 className="font-BebasNeue font-black text-3xl italic text-center my-6">SEGERA DAFTAR PRE-SALE MEMBERSHIP ANDA SEKARANG TERBATAS! JANGAN SAMPAI KEDULUAN YANG LAIN!</h2> */}
+          <div className="my-8 md:flex">
+            <div>
+              <Image src={Poster11} alt="Foto" className="w-full md:hidden" />
+              <Image src={Poster1} alt="Foto" className="w-full hidden md:block" />
+            </div>
+            <div>
+              <Image src={Poster2} alt="Foto" className="w-full md:mt-[0.05rem] md:-ml-[0.1rem]" />
+            </div>
+          </div>
+        </div>
+        <div className="lg:px-8">
+          <div className="flex justify-around space-x-8 lg:space-x-12">
+            <button className="h-20 w-full bg-yellow-primary rounded-xl border-4 border-blue-primary text-2xl font-black font-Poppins-Bold ">
+              <p>OFF PEAK</p>
+              <p className="text-base font-Poppins">(10 AM - 4 PM)</p>
+            </button>
+            <button className="h-20 w-full bg-yellow-primary rounded-xl border-4 border-blue-primary text-2xl font-black font-Poppins-Bold ">
+              <p>OFF HOUSE</p>
+            </button>
+          </div>
+          <div className="p-4 w-full mx-auto space-x-4 flex lg:justify-center items-start flex-nowrap overflow-hidden overflow-x-auto no-scrollbar">
+            <div className="w-64">
+              <BtnMembership>
+                <div className="w-full">
+                  <p>Membership</p>
+                  <p>1 Bulan</p>
+                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
+                </div>
+              </BtnMembership>
+              <div className="py-4 w-56 lg:w-full">
+                <BtnMembershipChildren><p>Unlimited Time</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>24 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>12 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>6 Jam / Bulan</p></BtnMembershipChildren>
+              </div>
+            </div>
+            <div className="w-64">
+              <BtnMembership>
+                <div className="w-full">
+                  <p>Membership</p>
+                  <p>3 Bulan</p>
+                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
+                  <p className="text-xs">Hemat Hingga 25% / Bulan</p>
+                </div>
+              </BtnMembership>
+              <div className="py-4 w-56 lg:w-full">
+                <BtnMembershipChildren><p>Unlimited Time</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>24 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>12 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>6 Jam / Bulan</p></BtnMembershipChildren>
+              </div>
+            </div>
+            <div className="w-64">
+              <BtnMembership>
+                <div className="w-full">
+                  <p>Membership</p>
+                  <p>6 Bulan</p>
+                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
+                  <p className="text-xs">Hemat Hingga 26% / Bulan</p>
+                </div>
+              </BtnMembership>
+              <div className="py-4 w-56 lg:w-full">
+                <BtnMembershipChildren><p>Unlimited Time</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>24 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>12 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>6 Jam / Bulan</p></BtnMembershipChildren>
+              </div>
+            </div>
+            <div className="w-64">
+              <BtnMembership>
+                <div className="w-full">
+                  <p>Membership</p>
+                  <p>12 Bulan</p>
+                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
+                  <p className="text-xs">Hemat Hingga 37% / Bulan</p>
+                </div>
+              </BtnMembership>
+              <div className="py-4 w-56 lg:w-full">
+                <BtnMembershipChildren><p>Unlimited Time</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>24 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>12 Jam / Bulan</p></BtnMembershipChildren>
+                <BtnMembershipChildren><p>6 Jam / Bulan</p></BtnMembershipChildren>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <button className="bg-blue-primary text-yellow-primary border-4 border-yellow-primary py-4 px-28 rounded-xl text-2xl font-Poppins-Bold font-black">CHECKOUT</button>
           </div>
         </div>
       </div>

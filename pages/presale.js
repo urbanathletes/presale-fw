@@ -17,6 +17,7 @@ import InputText from '../components/InputText'
 import Footer from '../components/Footer'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import BtnPrisale from '../components/BtnPrisale'
 
 function ButtonLink(props) {
   return <button className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black">{props.label}</button>
@@ -60,7 +61,7 @@ function Presale() {
             <p className="my-4 font-black text-xl">Daftar pre-sale sekarang juga, jaminan harga termurah di kelasnya.</p>
             <p className="my-4 py-2">FITNESSWORKS adalah GYM pertama di Gresik yang menerapkan Time Based Membership dan manajemen membership melalui aplikasi. membuat harga kami tetap ramah di kantong anda.</p>
             {/* <ButtonLink label="DAPATKAN PRE-SALE" /> */}
-            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">DAPATKAN PRE-SALE</a>
+            <BtnPrisale href="#form" />
           </div>
         </div>
       </div>
@@ -137,7 +138,7 @@ function Presale() {
 
         <div className="text-center py-4 my-4">
           {/* <ButtonLink label="DAPATKAN PRE-SALE" /> */}
-            <a className="bg-yellow-primary py-1 px-6 rounded-md text-blue-primary text-2xl font-BebasNeue font-black" href="#form">DAPATKAN PRE-SALE</a>
+          <BtnPrisale href="#form" />
         </div>
         <div className="lg:flex relative overflow-hidden">
           <div className="lg:absolute top-0 bottom-0 right-0 -left-16 h-[30rem] lg:h-full">
@@ -148,7 +149,7 @@ function Presale() {
           </div>
           <div className="relative ml-auto bg-form-1 lg:w-4/6">
             <div className="absolute top-0 bottom-0 left-0 right-0 bg-blue-primary/80 flex justify-center items-center lg:justify-end lg:pr-20" id="form">
-              <div className="w-full max-w-md">
+              <div className="w-full max-w-md px-4">
                 <h1 className="text-yellow-primary font-Poppins-Bold font-black text-4xl">REGISTER NOW!</h1>
                 <p className="text-white mb-4">Isi formulir di bawah, tim Konsultan kami akan segera menghubungi anda</p>
                 <form onSubmit={formSubmit}>
