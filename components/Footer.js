@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     <div>
-      <div className="bg-blue-primary text-white font-Poppins pt-4 pb-8 text-base">
+      <div className="bg-blue-primary text-white font-Poppins pt-4 pb-8 text-base px-4 md:px-8">
         <div className="container mx-auto font-light">
           <div className="border-b-4 border-white"></div>
           <div className="md:flex md:justify-between items-center lg:items-start">
