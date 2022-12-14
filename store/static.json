@@ -1,19 +1,91 @@
 {
-  "listTime": [
-    {"id":1, "name": "OFF PEAK", "time": "10am-4pm"},
-    {"id":2, "name": "PEAK HOURS", "time": ""}
-  ],
-  "membershipMonth": [
-    {"id":1, "name": "1 month"},
-    {"id":3, "name": "3 month"},
-    {"id":6, "name": "6 month"},
-    {"id":12, "name": "12 month"}
-  ],
-  "listCategory": [
-    {"id":1, "name":"Unlimited"},
-    {"id":2, "name":"24 HRS"},
-    {"id":3, "name":"12 HRS"},
-    {"id":4, "name":"6 HRS"}
+  "priceListFw":[
+    {
+      "id":1,
+      "name": "OFF PEAK",
+      "time": "10am - 4pm",
+      "category": [
+        {
+          "id":1, "name": "1",
+          "hours": [
+            {"name": "unlimited", "price": 388000},
+            {"name": "24 hrs", "price": 868000},
+            {"name": "12 hrs", "price": 1588000},
+            {"name": "6 hrs", "price": 2948000}
+          ]
+        },
+        {
+          "id":2, "name": "3",
+          "hours": [
+            {"name": "unlimited", "price": 368000},
+            {"name": "24 hrs", "price": 848000},
+            {"name": "12 hrs", "price": 1498000},
+            {"name": "6 hrs", "price": 2728000}
+          ]
+        },
+        {
+          "id":3, "name": "6",
+          "hours": [
+            {"name": "unlimited", "price": 348000},
+            {"name": "24 hrs", "price": 828000},
+            {"name": "12 hrs", "price": 1418000},
+            {"name": "6 hrs", "price": 2508000}
+          ]
+        },
+        {
+          "id":4, "name": "12",
+          "hours": [
+            {"name": "unlimited", "price": 318000},
+            {"name": "24 hrs", "price": 808000},
+            {"name": "12 hrs", "price": 1388000},
+            {"name": "6 hrs", "price": 2178000}
+          ]
+        }
+      ]
+    },
+    {
+      "id":2,
+      "name": "OFF HOURS",
+      "time": false,
+      "category": [
+        {
+          "id":1, "name": "unlimited",
+          "hours": [
+            {"name": "1 month", "price": 418000},
+            {"name": "3 month", "price": 908000},
+            {"name": "6 month", "price": 1788000},
+            {"name": "12 month", "price": 3278000}
+          ]
+        },
+        {
+          "id":2, "name": "24 hrs",
+          "month": [
+            {"name": "1 month", "price": 398000},
+            {"name": "3 month", "price": 888000},
+            {"name": "6 month", "price": 1708000},
+            {"name": "12 month", "price": 3058000}
+          ]
+        },
+        {
+          "id":3, "name": "12 hrs",
+          "month": [
+            {"name": "1 month", "price": 378000},
+            {"name": "3 month", "price": 808000},
+            {"name": "6 month", "price": 1598000},
+            {"name": "12 month", "price": 2838000}
+          ]
+        },
+        {
+          "id":4, "name": "6 hrs",
+          "month": [
+            {"name": "1 month", "price": 348000},
+            {"name": "3 month", "price": 708000},
+            {"name": "6 month", "price": 1388000},
+            {"name": "12 month", "price": 2508000}
+          ]
+        }
+      ]
+    }
   ]
 
 }

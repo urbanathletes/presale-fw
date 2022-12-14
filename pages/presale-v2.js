@@ -6,16 +6,15 @@ import Bgcountdown from '../images/bg_countdown.jpg'
 import Poster1 from '../images/Poster-1.jpg'
 import Poster11 from '../images/Poster-1-1.jpg'
 import Poster2 from '../images/Poster-2.jpg'
-import Fotos from '../images/example/Fotos.png'
+// import Fotos from '../images/example/Fotos.png'
 import Icon1 from '../images/icons/Icon_1.png'
 import Icon2 from '../images/icons/Icon_2.png'
 import Icon3 from '../images/icons/Icon_3.png'
 import Icon4 from '../images/icons/Icon_4.png'
 import Footer from '../components/Footer'
-import dataStatick from '../store/static.json'
 import BtnPrisale from '../components/BtnPrisale'
-import BtnMembership from '../components/BtnMembership'
-import BtnMembershipChildren from '../components/BtnMembershipChildren'
+// import BtnMembership from '../components/atoms/BtnMembership'
+import { ListPrice, ListPricev2 } from '../components/templates'
 
 function presaleV2() {
   const [getPresale , setPresale] = useState(false)
@@ -24,26 +23,6 @@ function presaleV2() {
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(0)
   const target = new Date("12/31/2022 23:59:59")
-  const [isActiveBtnTab, setIsActiveBtnTab] = useState({
-    btn1: false,
-    btn2: false
-  })
-  const months = {
-    month1: false,
-    month2: false,
-    month3: false,
-    month4: false
-  }
-  const [btnMonth, setBtnMonth] = useState(months)
-
-  const valuesBtn = {
-    val1: 0,
-    val2: 0,
-    val3: 0,
-    val4: 0,
-  }
-  const [btnValue, setBtnValue] = useState(valuesBtn)
-
 
   useEffect(() => {
     // console.log("dataStatick", dataStatick);
@@ -183,283 +162,86 @@ function presaleV2() {
             </div>
           </div>
         </div>
-        <div className="lg:px-8">
+
+        <ListPrice />
+        <ListPricev2 />
+
+        {/* <div className="lg:px-8">
           <div className="flex justify-around space-x-8 lg:space-x-12">
-            <button 
-              className={`h-20 w-full rounded-xl border-4 text-2xl font-black font-Poppins-Bold ${isActiveBtnTab.btn1 ? 'bg-blue-primary border-yellow-primary text-yellow-primary' : 'bg-yellow-primary border-blue-primary'}`} 
-              onClick={
-                () => {
-                  setIsActiveBtnTab({btn1:true})
-                }
-              }
-            >
+            <BtnTabMembership btnActive={isActiveBtnTab.btn1} onClick={() => {setIsActiveBtnTab({btn1:true})}}>
               <p>OFF PEAK</p>
               <p className="text-base font-Poppins">(10 AM - 4 PM)</p>
-            </button>
-            <button 
-              className={`h-20 w-full rounded-xl border-4 text-2xl font-black font-Poppins-Bold ${isActiveBtnTab.btn2 ? 'bg-blue-primary border-yellow-primary text-yellow-primary' : 'bg-yellow-primary border-blue-primary'}`} 
-              onClick={
-                () => {
-                  setIsActiveBtnTab({btn2:true})
-                }
-              }
-            >
+            </BtnTabMembership>
+            <BtnTabMembership btnActive={isActiveBtnTab.btn2} onClick={() => {setIsActiveBtnTab({btn2:true})}}>
               <p>OFF HOUSE</p>
-            </button>
+            </BtnTabMembership>
           </div>
-          <div className="p-4 w-full mx-auto space-x-4 flex lg:justify-center items-start flex-nowrap overflow-hidden overflow-x-auto no-scrollbar">
-            <div className="w-64">
-              <BtnMembership
-                onClick={
-                  () => {
-                    if (isActiveBtnTab.btn1 || isActiveBtnTab.btn2) {
-                      setBtnMonth({month1: true})
-                      setBtnValue(valuesBtn)
+          <div className="p-4 w-full mx-auto space-x-4 flex lg:justify-center flex-nowrap overflow-hidden overflow-x-auto no-scrollbar">
+            {
+              labelMembersipPrice.map((row, index) => {
+                return (
+                  <BtnMembershipPrice
+                    key={index}
+                    labelPrice={row}
+                    onClick={
+                      () => {
+                        if (isActiveBtnTab.btn1 || isActiveBtnTab.btn2) {
+                          setBtnMonth([...months, months[index]=true])
+                          setBtnValue(valuesBtn)
+                        }
+                      }
                     }
-                  }
-                }
-                btnActive={btnMonth.month1}
-              >
-                <div className="w-full">
-                  <p>Membership</p>
-                  <p>1 Bulan</p>
-                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
-                </div>
-              </BtnMembership>
-              <div className="py-4 w-56 lg:w-full">
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month1) {
-                      setBtnValue(1)
-                    }
-                  }}
-                  btnActive={btnValue == 1 && btnMonth.month1}
-                >
-                  <p>Unlimited Time</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month1) {
-                      setBtnValue(2)
-                    }
-                  }}
-                  btnActive={btnValue == 2 && btnMonth.month1}
-                >
-                  <p>24 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month1) {
-                      setBtnValue(3)
-                    }
-                  }}
-                  btnActive={btnValue == 3 && btnMonth.month1}
-                >
-                  <p>12 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month1) {
-                      setBtnValue(4)
-                    }
-                  }}
-                  btnActive={btnValue == 4 && btnMonth.month1}
-                >
-                  <p>6 Jam / Bulan</p>
-                </BtnMembershipChildren>
-              </div>
-            </div>
-            <div className="w-64">
-              <BtnMembership
-                onClick={
-                  () => {
-                    if (isActiveBtnTab.btn1 || isActiveBtnTab.btn2) {
-                      setBtnMonth({month2: true})
-                      setBtnValue(valuesBtn)
-                    }
-                  }
-                }
-                btnActive={btnMonth.month2}
-              >
-                <div className="w-full">
-                  <p>Membership</p>
-                  <p>3 Bulan</p>
-                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
-                  <p className="text-xs">Hemat Hingga 25% / Bulan</p>
-                </div>
-              </BtnMembership>
-              <div className="py-4 w-56 lg:w-full">
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month2) {
-                      setBtnValue(1)
-                    }
-                  }}
-                  btnActive={btnValue == 1 && btnMonth.month2}
-                >
-                  <p>Unlimited Time</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month2) {
-                      setBtnValue(2)
-                    }
-                  }}
-                  btnActive={btnValue == 2 && btnMonth.month2}
-                >
-                  <p>24 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month2) {
-                      setBtnValue(3)
-                    }
-                  }}
-                  btnActive={btnValue == 3 && btnMonth.month2}
-                >
-                  <p>12 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month2) {
-                      setBtnValue(4)
-                    }
-                  }}
-                  btnActive={btnValue == 4 && btnMonth.month2}
-                >
-                  <p>6 Jam / Bulan</p>
-                </BtnMembershipChildren>
-              </div>
-            </div>
-            <div className="w-64">
-              <BtnMembership
-                onClick={
-                  () => {
-                    if (isActiveBtnTab.btn1 || isActiveBtnTab.btn2) {
-                      setBtnMonth({month3: true})
-                      setBtnValue(valuesBtn)
-                    }
-                  }
-                }
-                btnActive={btnMonth.month3}
-              >
-                <div className="w-full">
-                  <p>Membership</p>
-                  <p>6 Bulan</p>
-                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
-                  <p className="text-xs">Hemat Hingga 26% / Bulan</p>
-                </div>
-              </BtnMembership>
-              <div className="py-4 w-56 lg:w-full">
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month3) {
-                      setBtnValue(1)
-                    }
-                  }}
-                  btnActive={btnValue == 1 && btnMonth.month3}
-                >
-                  <p>Unlimited Time</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month3) {
-                      setBtnValue(2)
-                    }
-                  }}
-                  btnActive={btnValue == 2 && btnMonth.month3}
-                >
-                  <p>24 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month3) {
-                      setBtnValue(3)
-                    }
-                  }}
-                  btnActive={btnValue == 3 && btnMonth.month3}
-                >
-                  <p>12 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month3) {
-                      setBtnValue(4)
-                    }
-                  }}
-                  btnActive={btnValue == 4 && btnMonth.month3}
-                >
-                  <p>6 Jam / Bulan</p>
-                </BtnMembershipChildren>
-              </div>
-            </div>
-            <div className="w-64">
-              <BtnMembership
-                onClick={
-                  () => {
-                    if (isActiveBtnTab.btn1 || isActiveBtnTab.btn2) {
-                      setBtnMonth({month4: true})
-                      setBtnValue(valuesBtn)
-                    }
-                  }
-                }
-                btnActive={btnMonth.month4}
-              >
-                <div className="w-full">
-                  <p>Membership</p>
-                  <p>12 Bulan</p>
-                  <p className="text-xl mt-3 mb-1 font-black">Rp. 999.000</p>
-                  <p className="text-xs">Hemat Hingga 37% / Bulan</p>
-                </div>
-              </BtnMembership>
-              <div className="py-4 w-56 lg:w-full">
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month4) {
-                      setBtnValue(1)
-                    }
-                  }}
-                  btnActive={btnValue == 1 && btnMonth.month4}
-                >
-                  <p>Unlimited Time</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month4) {
-                      setBtnValue(2)
-                    }
-                  }}
-                  btnActive={btnValue == 2 && btnMonth.month4}
-                >
-                  <p>24 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month4) {
-                      setBtnValue(3)
-                    }
-                  }}
-                  btnActive={btnValue == 3 && btnMonth.month4}
-                >
-                  <p>12 Jam / Bulan</p>
-                </BtnMembershipChildren>
-                <BtnMembershipChildren
-                  onClick={() => {
-                    if (btnMonth.month4) {
-                      setBtnValue(4)
-                    }
-                  }}
-                  btnActive={btnValue == 4 && btnMonth.month4}
-                >
-                  <p>6 Jam / Bulan</p>
-                </BtnMembershipChildren>
-              </div>
-            </div>
+                    btnActive={btnMonth[index]}
+                  >
+                    <BtnMembershipChildren
+                      onClick={() => {
+                        if (btnMonth[index]) {
+                          setBtnValue(1)
+                        }
+                      }}
+                      btnActive={btnValue == 1 && btnMonth[index]}
+                    >
+                      <p>Unlimited Time</p>
+                    </BtnMembershipChildren>
+                    <BtnMembershipChildren
+                      onClick={() => {
+                        if (btnMonth[index]) {
+                          setBtnValue(2)
+                        }
+                      }}
+                      btnActive={btnValue == 2 && btnMonth[index]}
+                    >
+                      <p>24 Jam / Bulan</p>
+                    </BtnMembershipChildren>
+                    <BtnMembershipChildren
+                      onClick={() => {
+                        if (btnMonth[index]) {
+                          setBtnValue(3)
+                        }
+                      }}
+                      btnActive={btnValue == 3 && btnMonth[index]}
+                    >
+                      <p>12 Jam / Bulan</p>
+                    </BtnMembershipChildren>
+                    <BtnMembershipChildren
+                      onClick={() => {
+                        if (btnMonth[index]) {
+                          setBtnValue(4)
+                        }
+                      }}
+                      btnActive={btnValue == 4 && btnMonth[index]}
+                    >
+                      <p>6 Jam / Bulan</p>
+                    </BtnMembershipChildren>
+                  </BtnMembershipPrice>
+                )
+              })
+            }
           </div>
           <div className="text-center">
             <button className="bg-blue-primary text-yellow-primary border-4 border-yellow-primary py-4 px-28 rounded-xl text-2xl font-Poppins-Bold font-black">CHECKOUT</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* ======Footer====== */}
