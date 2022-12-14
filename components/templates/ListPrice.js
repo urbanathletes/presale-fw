@@ -84,6 +84,7 @@ export const ListPrice = () => {
                         }
                       }}
                       btnActive={btnValue == 1 && btnMonth[index]}
+                      btnDisabled={true}
                     >
                       <p>Unlimited Time</p>
                     </BtnMembershipChildren>
@@ -94,6 +95,7 @@ export const ListPrice = () => {
                         }
                       }}
                       btnActive={btnValue == 2 && btnMonth[index]}
+                      btnDisabled={true}
                     >
                       <p>24 Jam / Bulan</p>
                     </BtnMembershipChildren>
@@ -104,6 +106,7 @@ export const ListPrice = () => {
                         }
                       }}
                       btnActive={btnValue == 3 && btnMonth[index]}
+                      btnDisabled={true}
                     >
                       <p>12 Jam / Bulan</p>
                     </BtnMembershipChildren>
@@ -114,6 +117,7 @@ export const ListPrice = () => {
                         }
                       }}
                       btnActive={btnValue == 4 && btnMonth[index]}
+                      btnDisabled={true}
                     >
                       <p>6 Jam / Bulan</p>
                     </BtnMembershipChildren>

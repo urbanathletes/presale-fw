@@ -2,6 +2,7 @@ import React from 'react'
 import BtnMembership from '../atoms/BtnMembership'
 
 function BtnMembershipPrice(props) {
+  // console.log(props.btnActive);
 
   const formatRupiah = (angka) => {
     const format = angka.toString().split('').reverse().join('');

@@ -8,37 +8,37 @@
         {
           "id":1, "name": "1",
           "hours": [
-            {"name": "unlimited", "price": 388000},
-            {"name": "24 hrs", "price": 868000},
-            {"name": "12 hrs", "price": 1588000},
-            {"name": "6 hrs", "price": 2948000}
+            {"name": "Unlimited", "price": 388000},
+            {"name": "24 Jam", "price": 868000},
+            {"name": "12 Jam", "price": 1588000},
+            {"name": "6 Jam", "price": 2948000}
           ]
         },
         {
           "id":2, "name": "3",
           "hours": [
-            {"name": "unlimited", "price": 368000},
-            {"name": "24 hrs", "price": 848000},
-            {"name": "12 hrs", "price": 1498000},
-            {"name": "6 hrs", "price": 2728000}
+            {"name": "Unlimited", "price": 368000},
+            {"name": "24 Jam", "price": 848000},
+            {"name": "12 Jam", "price": 1498000},
+            {"name": "6 Jam", "price": 2728000}
           ]
         },
         {
           "id":3, "name": "6",
           "hours": [
-            {"name": "unlimited", "price": 348000},
-            {"name": "24 hrs", "price": 828000},
-            {"name": "12 hrs", "price": 1418000},
-            {"name": "6 hrs", "price": 2508000}
+            {"name": "Unlimited", "price": 348000},
+            {"name": "24 Jam", "price": 828000},
+            {"name": "12 Jam", "price": 1418000},
+            {"name": "6 Jam", "price": 2508000}
           ]
         },
         {
           "id":4, "name": "12",
           "hours": [
-            {"name": "unlimited", "price": 318000},
-            {"name": "24 hrs", "price": 808000},
-            {"name": "12 hrs", "price": 1388000},
-            {"name": "6 hrs", "price": 2178000}
+            {"name": "Unlimited", "price": 318000},
+            {"name": "24 Jam", "price": 808000},
+            {"name": "12 Jam", "price": 1388000},
+            {"name": "6 Jam", "price": 2178000}
           ]
         }
       ]
@@ -49,39 +49,39 @@
       "time": false,
       "category": [
         {
-          "id":1, "name": "unlimited",
+          "id":1, "name": "1",
           "hours": [
-            {"name": "1 month", "price": 418000},
-            {"name": "3 month", "price": 908000},
-            {"name": "6 month", "price": 1788000},
-            {"name": "12 month", "price": 3278000}
+            {"name": "Unlimited", "price": 418000},
+            {"name": "24 Jam", "price": 908000},
+            {"name": "12 Jam", "price": 1788000},
+            {"name": "6 Jam", "price": 3278000}
           ]
         },
         {
-          "id":2, "name": "24 hrs",
-          "month": [
-            {"name": "1 month", "price": 398000},
-            {"name": "3 month", "price": 888000},
-            {"name": "6 month", "price": 1708000},
-            {"name": "12 month", "price": 3058000}
+          "id":2, "name": "3",
+          "hours": [
+            {"name": "Unlimited", "price": 398000},
+            {"name": "24 Jam", "price": 888000},
+            {"name": "12 Jam", "price": 1708000},
+            {"name": "6 Jam", "price": 3058000}
           ]
         },
         {
-          "id":3, "name": "12 hrs",
-          "month": [
-            {"name": "1 month", "price": 378000},
-            {"name": "3 month", "price": 808000},
-            {"name": "6 month", "price": 1598000},
-            {"name": "12 month", "price": 2838000}
+          "id":3, "name": "6",
+          "hours": [
+            {"name": "Unlimited", "price": 378000},
+            {"name": "24 Jam", "price": 808000},
+            {"name": "12 Jam", "price": 1598000},
+            {"name": "6 Jam", "price": 2838000}
           ]
         },
         {
-          "id":4, "name": "6 hrs",
-          "month": [
-            {"name": "1 month", "price": 348000},
-            {"name": "3 month", "price": 708000},
-            {"name": "6 month", "price": 1388000},
-            {"name": "12 month", "price": 2508000}
+          "id":4, "name": "12",
+          "hours": [
+            {"name": "Unlimited", "price": 348000},
+            {"name": "24 Jam", "price": 708000},
+            {"name": "12 Jam", "price": 1388000},
+            {"name": "6 Jam", "price": 2508000}
           ]
         }
       ]
